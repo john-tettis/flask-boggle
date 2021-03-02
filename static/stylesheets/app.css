@@ -26,8 +26,26 @@ table td:after, table td:before {
   padding-bottom: calc(50% - 0.6em);
 }
 
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+  .container.small {
+    display: none;
+  }
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .game-container {
+    width: 100%;
+  }
+}
+
 .game-container {
-  width: 70%;
+  width: 40%;
 }
 
 h1 {
@@ -35,7 +53,6 @@ h1 {
 }
 
 .container {
-  width: 50%;
   padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,6 +66,14 @@ h1 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.container.big {
+  width: 70%;
+}
+
+.container:small {
+  width: 30%;
 }
 
 body {

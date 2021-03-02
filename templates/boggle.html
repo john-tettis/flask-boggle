@@ -2,8 +2,7 @@
 
 {% block title%}Boggle Game{% endblock %}
 {% block content%}
-<div class="container">
-    
+<div class="container big">
     <div class="game-container">
         <div class="top-row">
             <div class="left-col">
@@ -37,10 +36,10 @@
    
     
 </div>
-<div class="container">
+<div class="container small">
     
     <div class="score-board">
-        <h2>LeaderBoard</h2>
+        <h2>LeaderBoard -</br><small> {{nplays}} attempts</small></h2>
         <ol>
         {% for score in scores %}
         <li>{{score}}</li>
