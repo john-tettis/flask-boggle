@@ -1,5 +1,6 @@
 table {
-  width: 90%;
+  width: 100%;
+  margin: auto;
   background-color: #3270cc;
   padding: 1em;
   border-radius: 20px;
@@ -22,7 +23,11 @@ table td {
 table td:after, table td:before {
   content: '';
   display: block;
-  padding-bottom: calc(50% - 0.5em);
+  padding-bottom: calc(50% - 0.6em);
+}
+
+.game-container {
+  width: 70%;
 }
 
 h1 {
@@ -30,7 +35,7 @@ h1 {
 }
 
 .container {
-  width: 40%;
+  width: 50%;
   padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,14 +61,15 @@ body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
 }
 
 button {
   border: none;
   padding: .5em 1em;
   margin: .5em;
-  color: white;
-  background-color: #3270cc;
+  color: #3270cc;
+  background-color: gold;
   border-radius: 6px;
 }
 
@@ -73,8 +79,65 @@ button:focus {
 
 button:hover {
   background-color: #bed3f3;
-  color: #3270cc;
+  color: gold;
   -webkit-box-shadow: 0px 1px 1px #c7c5c5;
           box-shadow: 0px 1px 1px #c7c5c5;
+}
+
+form {
+  width: 100%;
+}
+
+form input {
+  width: 90%;
+  font-size: 1.2em;
+  display: block;
+  border-radius: 10px;
+}
+
+form input:focus {
+  outline: 0;
+}
+
+form input label {
+  text-align: center;
+}
+
+.left-col, .right-col {
+  padding: 1em;
+  text-align: center;
+}
+
+.top-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.score-board {
+  background: #3270cc;
+  border: 3px solid gold;
+  border-radius: 10px;
+  width: 12rem;
+  height: 20rem;
+  text-align: center;
+}
+
+#message {
+  height: 1em;
+}
+
+a {
+  text-decoration: none;
+  padding: .5em 1em;
+  background: #3270cc;
+  border-radius: 5px;
+  color: white;
+}
+
+a:hover {
+  background-color: #bed3f3;
+  color: #3270cc;
 }
 /*# sourceMappingURL=app.css.map */

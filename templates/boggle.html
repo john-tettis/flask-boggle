@@ -3,33 +3,43 @@
 {% block title%}Boggle Game{% endblock %}
 {% block content%}
 <div class="container">
-    <h1>BOGGLE!</h1>
-    <div id="message"></div>
-    <table>
-        <tbody>
-        {% for row in board%}
-        <tr>
-        {% for el in row%}
-        <td>{{el}}</td>
-        {% endfor%}
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    
+    <div class="game-container">
+        <div class="top-row">
+            <div class="left-col">
+                <form action="#">
+                    <label for="guess">Guess a Word:</label>
+                    <input type="text" id="guess">
+                    <button>Submit</button>
+                    <div id="message"></div>
+                </form>
+            </div>
+            <div class="right-col">
+                <h3>Score: <span id="score">0</span></h3>
+                <p>Time: <span id="timer">60</span>s</p>
+            </div>
+        </div>
+        
+        
+        <table>
+            <tbody>
+            
+            {% for row in board%}
+            <tr>
+            {% for el in row%}
+            <td>{{el}}</td>
+            {% endfor%}
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+   
     
 </div>
-<div class="container score-board">
-    <div class="container score-time">
+<div class="container">
     
-    <form action="#">
-        <label for="guess">Guess a Word:</label>
-        <input type="text" id="guess">
-        <button>Submit</button>
-    </form>
-        <h3>Your score is: <span id="score">0</span></h3>
-        <p>Time Remaining: <span id="timer">60</span>s</p>
-    </div>
-    <div class="container">
+    <div class="score-board">
         <h2>LeaderBoard</h2>
         <ol>
         {% for score in scores %}

@@ -9,8 +9,8 @@ boggle_game = Boggle()
 app = Flask(__name__)
 app.debug=False
 app.config['SECRET_KEY'] ='124baby'
-
 toolbar = DebugToolbarExtension(app)
+
 @app.route('/')
 def home():
     return render_template('home.html')

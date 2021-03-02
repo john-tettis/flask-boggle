@@ -1,7 +1,8 @@
 $primary:rgb(50, 112, 204);
 $secondary:rgb(190, 211, 243);
 table{
-    width:90%;
+    width:100%;
+    margin:auto;
     background-color:$primary;
     padding:1em;
     border-radius:20px;
@@ -22,15 +23,19 @@ table{
             content: '';
     
             display: block;
-            padding-bottom: calc(50% - 0.5em);
+            padding-bottom: calc(50% - 0.6em);
         }
     }
+}
+.game-container{
+    width:70%;
+   
 }
 h1{
     text-align:center;
 }
 .container{
-width:40%;
+width:50%;
 padding:2em;
 display:flex;
 flex-direction:column;
@@ -40,21 +45,70 @@ justify-content:space-around
 body{
     display:flex;
     flex-direction:row;
-    justify-content:space-around
+    justify-content:space-around;
+    font-family: 'Poppins', sans-serif;
 }
 button{
     border:none;
     padding: .5em 1em;
     margin:.5em;
-    color:white;
-    background-color:$primary;
+    color:$primary;
+    background-color:gold;
     border-radius:6px;
     &:focus{
         outline:0;
     }
     &:hover{
         background-color:$secondary;
-        color:$primary;
+        color:gold;
         box-shadow: 0px 1px 1px rgb(199, 197, 197);
+    }
+}
+form{
+    width:100%;
+    input{
+        width:90%;
+        font-size:1.2em;
+        display:block;
+        border-radius:10px;
+        &:focus{
+            outline:0;
+        }
+        label{
+            text-align:center;
+        }
+}
+
+}
+.left-col, .right-col{
+    padding:1em;
+    text-align:center;
+}
+.top-row{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.score-board{
+    background:$primary;
+    border:3px solid gold;
+    border-radius:10px;
+    width:12rem;
+    height:20rem;
+    text-align: center;
+}
+
+#message{
+    height:1em;
+}
+
+a{
+    text-decoration:none;
+    padding:.5em 1em;
+    background:$primary;
+    border-radius:5px;
+    color:white;
+    &:hover{
+        background-color:$secondary;
+        color:$primary;
     }
 }
